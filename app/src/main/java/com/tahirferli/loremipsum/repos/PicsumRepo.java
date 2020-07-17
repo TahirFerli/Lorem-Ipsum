@@ -15,7 +15,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import timber.log.Timber;
 
-class PicsumRepo {
+public class PicsumRepo {
     private PicsumApi api;
 
     @Inject
