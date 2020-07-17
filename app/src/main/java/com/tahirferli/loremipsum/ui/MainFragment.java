@@ -10,7 +10,9 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
+import com.tahirferli.loremipsum.LoremApp;
 import com.tahirferli.loremipsum.R;
+import com.tahirferli.loremipsum.dagger.LoremComponent;
 import com.tahirferli.loremipsum.databinding.FragmentMainBinding;
 
 public class MainFragment extends Fragment {
@@ -22,7 +24,10 @@ public class MainFragment extends Fragment {
         FragmentMainBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main,
                 container, false);
 
-        return binding.getRoot();
+        LoremApp app = (LoremApp) getActivity().getApplication();
+        LoremComponent component = app.getComponent();
+        component.inject(this);
 
+        return binding.getRoot();
     }
 }

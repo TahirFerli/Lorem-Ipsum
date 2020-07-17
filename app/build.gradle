@@ -24,6 +24,15 @@ android {
     buildFeatures {
         dataBinding true
     }
+
+    // If you get an error saying:
+    // invoke customs are only supported starting with android o
+    // https://stackoverflow.com/a/50198499/6699740
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
