@@ -36,8 +36,7 @@ public class MainFragment extends Fragment {
         FragmentMainBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main,
                 container, false);
 
-        MainActivity activity = (MainActivity) getActivity();
-        LoremApp app = (LoremApp) activity.getApplication();
+        LoremApp app = (LoremApp) getActivity().getApplication();
         LoremComponent component = app.getComponent();
         component.inject(this);
 
