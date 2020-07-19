@@ -5,9 +5,13 @@ import com.google.gson.annotations.SerializedName;
 public class Picsum {
 
     @SerializedName("id")
-    String picId;
-    String author;
-    String url;
+    private String picId;
+    private String author;
+    private int width;
+    private int height;
+    private String url;
+    @SerializedName("download_url")
+    private String downloadUrl;
 
     public String getPicId() {
         return picId;
@@ -31,5 +35,17 @@ public class Picsum {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }
